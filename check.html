@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Total Expense</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<h2>Expense Summary</h2>
+
+<p><strong>Total Expense:</strong> ₹{{ total if total else 0 }}</p>
+
+<p><strong>Last Expense Date:</strong> {{ last_date if last_date else "No expenses yet" }}</p>
+
+<a href="/">Back</a>
+
+</body>
+</html>

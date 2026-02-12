@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+</head>
+<body>
+
+<h1>WELCOME TO OUR EXPENSE TRACKER APPLICATION</h1>
+<h2>Expense Tracker</h2>
+
+<a href="/logout">Logout</a>
+
+<form method="POST" action="/add">
+    <input type="text" name="name" placeholder="Expense name" required>
+    <input type="number" name="amount" placeholder="Amount" required>
+    <input type="text" name="category" placeholder="Category">
+    <input type="date" name="expense_date" required>
+    <button type="submit">Add</button>
+</form>
+<a href="/check">
+    <button>Check Expense</button>
+</a>
+
+
+<h3>Expenses</h3>
+<ul>
+    {% for e in expenses %}
+        <li>
+            {{ e.expense_date }} | {{ e.name }} | ₹{{ e.amount }} | {{ e.category }}
+        </li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>
