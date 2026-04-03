@@ -11,7 +11,7 @@ def init_db():
     """)
 
     
-    # EXPENSES TABLE
+    # EXPENSES TABL
     conn.execute("""
         CREATE TABLE IF NOT EXISTS expenses (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
