@@ -10,6 +10,7 @@ def init_db():
         )
     """)
 
+    
     # EXPENSES TABLE
     conn.execute("""
         CREATE TABLE IF NOT EXISTS expenses (
